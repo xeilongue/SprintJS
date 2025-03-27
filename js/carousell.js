@@ -7,7 +7,7 @@ class Carousel {
     constructor(content) {
         this.img = document.getElementById('carousel-img')
         this.title = document.getElementById('carousel-title')
-        this.url = document.getElementById('href-carousel')
+        this.url = document.getElementById('carousel-link')
         this.content = content
         this.index = 0
     }
