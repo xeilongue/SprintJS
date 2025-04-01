@@ -16,11 +16,31 @@ main.home {
     align-items: center;
 }
 
+.prevBtn {
+    width: 3vw;
+    height: 6vh;
+    opacity: 70%;
+    background-image: url(../img/fast-forwardvolta.png);
+    background-size: cover;
+    border: none;
+    background-color: white;
+}
+
+.nextBtn {
+    width: 3vw;
+    height: 6vh;
+    opacity: 70%;
+    background-image: url(../img/fast-forward.png);
+    background-size: cover;
+    border: none;
+    background-color: white;
+}
+
 div#carousel {
     gap: 10px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 75%;
     max-height: 628px;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -118,10 +138,11 @@ footer div {
     margin-right: 40px;
 }
 
-button:hover {
+button:hover:not(.nextBtn, .prevBtn) {
     background: #1b357e;
 }
-button {
+
+button:not(.nextBtn, .prevBtn) {
     background: #1351d8;
     color: #fff;
     border: 0px;

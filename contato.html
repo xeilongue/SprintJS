@@ -8,7 +8,7 @@
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
-    <script src="js/form.js"></script>
+    <link rel="stylesheet" href="css/animation.css">
 </head>
 <body>
     <header>       
@@ -48,6 +48,13 @@
                     <option>TELEFONE</option>
                     <option>E-MAIL</option>
                 </select>
+                <textarea id="mensagem" name="mensagem"  class="fordform" placeholder="MENSAGEM*" required></textarea>
+                <select id="contato" name="contato" class="fordform">
+                <option selected>TIPO DA MENSAGEM</option>
+                <option value="elogio">ELOGIO</option>
+                    <option value="reclamacao">RECLAMAÇÃO</option>
+                    <option value="solicitacao">SOLICITAÇÃO</option>
+                </select>
             <button type="submit">Enviar</button>
             </form>
             </div>
@@ -63,8 +70,10 @@
             </ul>
         </nav>
         <div>
-           <img src="img/ford-96.png" width="70"  />
+           <img src="img/ford-96.png" width="70"/>
         </div>
-    </footer>    
+    </footer>
+    <script src="js/form.js"></script>
+    <script src="js/animation.js"></script>
 </body>
 </html>

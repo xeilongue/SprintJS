@@ -10,17 +10,21 @@ class Carousel {
         this.url = document.getElementById('carousel-link')
         this.content = content
         this.index = 0
+
+        this.prevBtn = document.getElementById("prevBtn")
+        this.nextBtn = document.getElementById("nextBtn")
+
     }
 
     start(interval) {
 
         this.updateElements()
-        this.next()
+
 
         setInterval(() => {
 
-            this.updateElements()
             this.next()
+            this.updateElements()
             
         }, interval)
 
@@ -41,6 +45,26 @@ class Carousel {
         this.img.src = this.content[this.index].img
         this.title.innerHTML = this.content[this.index].title
         this.url.href = this.content[this.index].url
+    }
+
+
+
+    nextbutton() {
+        clearInterval(interval)
+        this.next()
+        this.updateElements()
+    }
+
+    backbutton() {
+        
+        if (this.index === 0) {
+            this.index = content.length-1
+        }
+        else {
+            this.index--
+        }
+
+        this.updateElements()
     }
 
 }
@@ -65,4 +89,8 @@ const content = [
 
 const carousel = new Carousel(content)
 
-carousel.start(2000)
+let interval = 2000
+carousel.start(interval)
+
+carousel.prevBtn.addEventListener("click", () => carousel.backbutton())
+carousel.nextBtn.addEventListener("click", () => carousel.nextbutton())
