@@ -23,7 +23,7 @@ main.home {
     background-image: url(../img/fast-forwardvolta.png);
     background-size: cover;
     border: none;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .nextBtn {
@@ -33,7 +33,7 @@ main.home {
     background-image: url(../img/fast-forward.png);
     background-size: cover;
     border: none;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 div#carousel {

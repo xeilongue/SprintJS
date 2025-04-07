@@ -56,7 +56,7 @@ function SetCarToCompare(input, car) {
 function ShowCompare() {
    
     if (carList.length !== 2) {
-        alert ("O número de pessoas tem que ser dois!")
+        alert ("O número de carros tem que ser dois!")
         return
     }
 
