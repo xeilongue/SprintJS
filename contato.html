@@ -41,19 +41,19 @@
                 <h2 class="titulo">Sobre Você</h2>
                 <form onsubmit="Post(this);">
                     <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
-                    <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
-                    <input type="text" name="cpf" placeholder="CPF*" class="fordform" required>
+                    <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
+                    <input type="number" name="cpf" placeholder="CPF*" class="fordform" required>
                     <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
-                    <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" required>
+                    <input type="number" name="telefone" placeholder="TELEFONE*" class="fordform" required>
                     <select name="contato" class="fordform" required>
-                        <option selected>COMO DESEJA SER CONTATADO</option>
+                        <option disabled selected>COMO DESEJA SER CONTATADO*</option>
                         <option>TELEFONE</option>
                         <option>E-MAIL</option>
                     </select>
                     <textarea id="mensagem" name="mensagem" class="fordform" placeholder="MENSAGEM*"
                         required></textarea>
-                    <select id="contato" name="contato" class="fordform">
-                        <option selected>TIPO DA MENSAGEM</option>
+                        <select id="contato" name="contato" class="fordform" required>
+                        <option disabled selected>TIPO DA MENSAGEM*</option>
                         <option value="elogio">ELOGIO</option>
                         <option value="reclamacao">RECLAMAÇÃO</option>
                         <option value="solicitacao">SOLICITAÇÃO</option>
@@ -62,12 +62,12 @@
                     <section class="checkboxcontato">
                     <p class="termos">
                         Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A qualquer
-                        momento será possível editar ou remover tais dados. <a href="">Termos e Condições</a>
+                        momento será possível editar ou remover tais dados. <a href="https://www.ford.com.br/politica-de-privacidade/" target=”_blank”>Termos e Condições</a>
                     </p>
 
                     <div class="checkbox">
-                        <input type="checkbox">
-                        <p>Sim, li e concordo com os vossos termos.</p>
+                        <input type="checkbox" id="checkboxtermos">
+                        <p>Sim, li e concordo com os vossos termos.<span style="font-weight: 800;">*</span></p>
                     </div>
 
                     <div class="checkbox">
@@ -76,7 +76,7 @@
                     </div>
                     </section>
 
-                    <button type="submit">Enviar</button>
+                    <button type="submit" disabled id="botaocontato">Enviar</button>
                 </form>
             </div>
         </div>
